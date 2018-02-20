@@ -8,6 +8,10 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	
+	<modules>
+		<module>projectwork_06-model</module>
+	</modules>
+	
 	<!-- Stiamo cambiando la JDK con il seguente script -->
 	
 	<build>
@@ -29,7 +33,4 @@
   
   	<!-- ////////// -->
 	
-	<modules>
-		<module>projectwork_06-model</module>
-	</modules>
 </project>
