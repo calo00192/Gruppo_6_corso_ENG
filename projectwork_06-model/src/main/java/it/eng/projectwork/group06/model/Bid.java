@@ -110,8 +110,6 @@ public class Bid extends PrimaryKey<Long> implements Serializable {
 	public void setAuction(Auction auction) {
 		this.auction = auction;
 	}
-	
-	
-	
-	
 }
+
+
