@@ -36,10 +36,10 @@ public abstract class User extends PrimaryKey <String>  implements Serializable 
 	
 	@Id
 	@Column(name = "CF", length = 16)
-	private String codiceFiscale;
+	private String fiscalCode;
 	
 	@Column(name = "NOME")
-	private String nome;
+	private String name;
 	
 	@Column(name = "COGNOME")
 	private String surname;
@@ -54,20 +54,20 @@ public abstract class User extends PrimaryKey <String>  implements Serializable 
 	
 	@Column(name = "DATA_DI_NASCITA")
 	@Temporal(TemporalType.DATE)
-	private Date dataNascita;
+	private Date timeBirth;
 	
 	///////////////////////////////////////////////////////////////
 	//			IMPLEMENTAZIONE METODI ASTRATTO
 	
 	public String getKey() {
-		return getCodiceFiscale();
+		return getFiscalCode();
 	}
 
 	/**
 	 * @return the codiceFiscale
 	 */
-	public String getCodiceFiscale() {
-		return codiceFiscale;
+	public String getFiscalCode() {
+		return fiscalCode;
 	}
 	
 	/**
@@ -75,7 +75,7 @@ public abstract class User extends PrimaryKey <String>  implements Serializable 
 	 * imposta il campo codiceFiscale come chiave primaria di questa tabella
 	 * @param codFisc = Stringa rappresentante un codice fiscale
 	 */
-	public void setKey(String codFisc) {
+	public void setKey(String fiscCode) {
 		
 	}
 	
@@ -83,17 +83,17 @@ public abstract class User extends PrimaryKey <String>  implements Serializable 
 	//			METODI DELLA CLASSE
 
 	/**
-	 * @return the nome
+	 * @return the name
 	 */
-	public String getNome() {
-		return nome;
+	public String getName() {
+		return name;
 	}
 
 	/**
 	 * @param nome the nome to set
 	 */
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	/**
@@ -127,17 +127,22 @@ public abstract class User extends PrimaryKey <String>  implements Serializable 
 	/**
 	 * @return the dataNascita
 	 */
-	public Date getDataNascita() {
-		return dataNascita;
+	public Date getTimeBirth() {
+		return timeBirth;
 	}
 
 	/**
 	 * @param dataNascita the dataNascita to set
 	 */
-	public void setDataNascita(Date dataNascita) {
-		this.dataNascita = dataNascita;
+	public void setTimeBirth(Date timeBirth) {
+		this.timeBirth = timeBirth;
 	}
 	
 	
-	//TODO: Implementare il toString()
-}
+	
+	@Override
+	public String toString() {
+		return String.format("Codice Fiscale = %s , Nome = %s , Cognome = %s , Data di nascita = %s  ", getFiscalCode() , getName() , getSurname() , getTimeBirth());
+		}}
+
+
