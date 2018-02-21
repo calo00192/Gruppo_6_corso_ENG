@@ -70,8 +70,8 @@ public class Auction extends PrimaryKey<Long> implements Serializable {
 	/**
 	 * Lista delle offerte relative all'asta
 	 */
-	/*@OneToMany(mappedBy = "auction", cascade = CascadeType.ALL)
-	private List<Bid> bidList = new ArrayList<Bid>();*/
+	@OneToMany(mappedBy = "auction", cascade = CascadeType.ALL)
+	private List<Bid> bidList = new ArrayList<Bid>();
 	
 	/**
 	 * Il prodotto messo all'asta
@@ -187,16 +187,16 @@ public class Auction extends PrimaryKey<Long> implements Serializable {
 	/**
 	 * @return the bidList
 	 */
-	/*public List<Bid> getBidList() {
+	public List<Bid> getBidList() {
 		return bidList;
-	}*/
+	}
 
 	/**
 	 * @param bidList the bidList to set
 	 */
-	/*public void setBidList(List<Bid> bidList) {
+	public void setBidList(List<Bid> bidList) {
 		this.bidList = bidList;
-	}*/
+	}
 
 	/**
 	 * @return the product
