@@ -41,11 +41,13 @@ public class Auction extends PrimaryKey<Long> implements Serializable {
 	/**
 	 * Chiave primaria della tabella ASTA
 	 */
-	@Id
-	@Column(name = "ID")
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "PK_GENERATOR")
-	@SequenceGenerator(name = "PK_GENERATOR", sequenceName = "GENERATOR_1", allocationSize = 1)
-	private Long key;
+//	@Id
+//	@Column(name = "ID")
+//	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "PK_GENERATOR")
+//	@SequenceGenerator(name = "PK_GENERATOR", sequenceName = "GENERATOR_1", allocationSize = 1)
+//	private Long key;
+	
+	
 	
 	/**
 	 * Titolo dell'asta
@@ -117,6 +119,10 @@ public class Auction extends PrimaryKey<Long> implements Serializable {
 	///////////////////////////////////////////
 	//			IMPLEMENTAZIONE METODI ASTRATTI
 	
+	@Id
+	@Column(name = "ID")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "PK_GENERATOR")
+	@SequenceGenerator(name = "PK_GENERATOR", sequenceName = "GENERATOR_1", allocationSize = 1)
 	public Long getKey() {
 		return this.key;
 	}
