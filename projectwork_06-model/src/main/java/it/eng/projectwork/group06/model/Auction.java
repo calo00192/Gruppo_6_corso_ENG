@@ -262,11 +262,16 @@ public class Auction extends PrimaryKey<Long> implements Serializable {
 	}
 
 	/**
+	 * E' private perchè deve essere settato solo all'istanziamento dell'asta
 	 * @param pricing the pricing to set
 	 */
-	public void setPricing(Pricing pricing) {
+	private void setPricing(Pricing pricing) {
+		
+		
 		this.pricing = pricing;
 	}
+	
+	
 	
 	//////////////////////////////////////////
 	//			METODI DELLA CLASSE

@@ -30,8 +30,7 @@ public class JpacrudTest extends JPAHibernateTest {
 	@Test
 	public void test2() {
 		
-		Query query = em.createQuery("SELECT u FROM Supplier u WHERE 1 = 1");
-		query.setParameter("email", "giancarlo.compagno@eng.it");
+		Query query = em.createQuery("SELECT u FROM Supplier u");
 		List<Supplier> users = query.getResultList();
 		for(Supplier user : users) {
 			System.out.println(user.getName());
