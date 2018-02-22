@@ -73,7 +73,7 @@ public class Auction extends PrimaryKey<Long> implements Serializable {
 	 * Lista delle offerte relative all'asta
 	 */
 	@OneToMany(mappedBy = "auction", cascade = CascadeType.ALL)
-	private List<Bid> bidList = new ArrayList<Bid>();
+	private List<Bid> bids = new ArrayList<Bid>(); //Cambiare in bids
 	
 	/**
 	 * Il prodotto messo all'asta
@@ -132,7 +132,8 @@ public class Auction extends PrimaryKey<Long> implements Serializable {
 	 * la chiave è un contatore che si autoincrementa
 	 */
 	public void setKey(Long key) throws IllegalOperationException {
-		throw new IllegalOperationException("Explicit key setting not allowed");
+		throw new IllegalOperationException("Explicit key setting not allowed"); //
+		//new UnsupportedOperationException()
 	}
 	
 	//////////////////////////////////////////
@@ -194,14 +195,14 @@ public class Auction extends PrimaryKey<Long> implements Serializable {
 	 * @return the bidList
 	 */
 	public List<Bid> getBidList() {
-		return bidList;
+		return bids;
 	}
 
 	/**
 	 * @param bidList the bidList to set
 	 */
 	public void setBidList(List<Bid> bidList) {
-		this.bidList = bidList;
+		this.bids = bidList;
 	}
 
 	/**

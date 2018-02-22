@@ -13,6 +13,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 
 
@@ -59,6 +60,7 @@ public abstract class User extends PrimaryKey <String>  implements Serializable 
 	///////////////////////////////////////////////////////////////
 	//			IMPLEMENTAZIONE METODI ASTRATTO
 	
+	@Transient
 	public String getKey() {
 		return getFiscalCode();
 	}
@@ -77,6 +79,7 @@ public abstract class User extends PrimaryKey <String>  implements Serializable 
 	 */
 	public void setKey(String fiscCode) {
 		
+		this.fiscalCode = fiscCode;
 	}
 	
 	////////////////////////////////////////////////////////////////////
