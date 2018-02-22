@@ -9,7 +9,8 @@
 	<modules>
 		<module>projectwork_06-model</module>
     <module>project-ear</module>
-  </modules>
+    <module>buisness-logic</module>
+	</modules>
 	
 	<!-- Stiamo cambiando la JDK con il seguente script -->
 	
